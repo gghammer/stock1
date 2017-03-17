@@ -269,20 +269,20 @@ def crawl_history(target):
     print("Crawl history is done")
                         
 #main   
-def main(fucntion):
+def main(function):
         
-    if fucntion == 'create_lib':
+    if function == 'create_lib':
         create_sql_lib('stock.sqlite')      
         
     elif function == 'update_stock_lib':
         update_stock_id('stock.sqlite')  
     
-    elif fucntion == 'crawl':      
+    elif function == 'crawl':      
         crawl('stock.sqlite')  #target sql file name , para    
         stock = crawl_history('stock.sqlite')  
-    elif fucntion == 'crawl_history':      
+    elif function == 'crawl_history':      
         stock = crawl_history('stock.sqlite')   
-    elif fucntion == 'report':
+    elif function == 'report':
         send_to_gmail('twse.csv','daily.xlsx') #source pandas structure , target excel file name        
     else:
         print(' Usag   hamu create_lib          #建立資料庫')
